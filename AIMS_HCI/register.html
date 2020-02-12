@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+	<title> Register form </title>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="sweetalert.js"></script>
+	<sript src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></sript>
+	<link rel="stylesheet" type="text/css" href="register.css">
+</head>
+<body>
+	<div class="header">
+        <img src="logo.jpg">
+        <p id="upper">PHINMA EDUCATION</p>
+        <div class="line"></div>
+        <p id="under">MAKING LIVES BETTER THROUGH EDUCATION</p>
+    </div>
+
+    <div class="acad">Academic Information Management System <i class="fa fa-lock" aria-hidden="true"></i></div>
+
+	<div class="login-box">
+    	<h2>Register</h2>
+    	<div class="error"></div>
+	    	<form id="form" action="/" >
+				<div class="textbox" id="text">
+			        <label for="name"> Student Number </label><br>   
+			        <i class="fa fa-user" aria-hidden="true"></i>
+			        <input id="student" type="text" placeholder="Enter your student number">
+			    </div>
+
+				<div class="textbox" id="text1">
+			        <label for="email"> Email Address </label><br>   
+			        <i class="fa fa-envelope" aria-hidden="true"></i>
+			        <input id="email" type="text" placeholder="Enter your email">
+			    </div>
+			    
+				<div class="textbox" id="text2">
+			        <label for="password"> Password </label><br>   
+			        <i class="fa fa-lock" aria-hidden="true"></i>
+			        <input id="password" type="password" placeholder="Enter your password">
+			    </div>
+			    
+				<div class="textbox" id="text3">
+			        <label for="confirm"> Confirm Password </label><br>   
+			        <i class="fa fa-lock" aria-hidden="true"></i>
+			        <input id="confirm" type="password" placeholder="Confirm your password">
+			    </div>
+
+		    <span class="rmbr"><input type="checkbox" name="remember"> I accept terms and conditions </span>
+
+		    <button id="btn"> Register </button>
+
+		</form>
+
+    </div>
+
+    	<a href="https://accounts.google.com/"><div class="google">Login via<img class="gplus" src="gplus.png"></div></a>
+
+	    <a href="https://www.facebook.com/"><div class="facebook">Login via<img class="fb" src="fb.png"></div></a>
+<script>
+	$('#btn').on('click', function(){    
+
+        var studentNumber = $('#student').val();
+        var email = $('#email').val();
+        var password = $('#password').val();
+        var confirm = $('#confirm').val();
+
+        if(studentNumber == ''|| email == '' || password == '' || confirm == ''){
+            swal({
+              title: "Fields Empty!!",
+              text: "Please fill the missing field!",
+              icon: "warning",
+              button: "Ok!",
+            })
+        }
+        else if(password!=confirm){
+        	alert('Password does not match!');
+        }
+        else{
+            swal({
+              title: "You've sucessfully Log in!",
+              icon: "success",
+              button: "Ok!",
+            })
+        }
+});
+const errorElement = document.getElementById('error')
+form.addEventListener('submit', (e) => {
+    
+        e.preventDefault()
+    }
+)
+</script>
+</body>
+</html>

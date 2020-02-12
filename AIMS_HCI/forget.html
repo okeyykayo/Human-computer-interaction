@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+	<title> Forget your password? </title>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<sript src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></sript>
+    <script src="sweetalert.js"></script>
+	<link rel="stylesheet" type="text/css" href="forget.css">
+</head>
+<body>
+	<div class="header">
+        <img src="logo.jpg">
+        <p id="upper">PHINMA EDUCATION</p>
+        <div class="line"></div>
+        <p id="under">MAKING LIVES BETTER THROUGH EDUCATION</p>
+    </div>
+
+    <div class="acad">Academic Information Management System <i class="fa fa-lock" aria-hidden="true"></i></div>
+
+    <div class="container">
+	    <h2>Forgot your password?</h2>
+	    <div class="error"></div>
+
+    	<form id="form" action="/">
+		    
+		    <p>Enter your email to get a verification code!</p>
+
+		    <input id="email" type="text" placeholder="Enter your email address" email="email">
+
+		     <button id="btn" type="submit">Ok</button>
+
+		</form>
+		
+    </div>
+
+<script>
+$('#btn').on('click', function(){
+	 var email = $('#email').val();
+
+	if(email == ''){
+	    swal({
+	        title: "Please enter your email!",
+	        icon: "warning",
+	        button: "Ok!",
+	    })
+	}
+    else {
+	    swal({
+	    	title: "Verification code has been sent!",
+	    	icon: "success",
+	        button: "Ok!",
+	    })
+	}
+});
+const errorElement = document.getElementById('error')
+form.addEventListener('submit', (e) => {
+    
+        e.preventDefault()
+    }
+)
+</script>
+</body>
+</html>
+    

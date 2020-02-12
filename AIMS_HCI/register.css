@@ -1,0 +1,163 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+img {
+    position: absolute;
+    left: 37.5%;
+    top: 20px;
+    width: 110px;
+}
+#upper {
+    position: absolute;
+    left: 48%;
+    top: 40px;
+}
+.line {
+    border-bottom: 1px solid black;
+    position: absolute;
+    top: 11.5%;
+    right: 37%;
+    width: 17%;
+}
+#under {
+    position: absolute;
+    left: 46%;
+    top: 70px;
+    font-size: 12px;
+    letter-spacing: -1px;
+}
+.acad {
+   position: absolute;
+   top: 22%;
+   left: 36.5%;
+   font-size: 18px;
+}
+.login-box {
+    width: 380px;
+    height: 58%;
+    position: absolute;
+    top: 32%;
+    left: 36%;
+    color: black;
+    border: 1px solid black;
+    background-color: #d6d6c2;
+}
+.login-box h2 {
+   position: absolute;
+   top: -10%;
+   left: 33%;
+   padding: 3px 15px;
+   border: 1px solid black;
+   background-color: white;
+}
+.textbox i {
+   width: 26px;
+   height: 22px;
+   float: left;
+   text-align: center;
+   border: 1px solid black;
+   padding-top: 3px;
+   background-color: white;
+}
+.textbox input {
+  border: 1px solid black;
+  width: 84%;
+  height: 23px;
+}
+.textbox {
+  position: relative;
+  margin-left: 20px;
+}
+#text {
+    position: absolute;
+    top: 7%;
+    width: 95%;
+}
+#text1 {
+    position: absolute;
+    top: 23%;
+    width: 95%;
+}
+#text2 {
+    position: absolute;
+    top: 39%;
+    width: 95%;
+}
+#text3 {
+    position: absolute;
+    top: 55%;
+    width: 95%;
+}
+.textbox label {
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+.rmbr {
+  bottom: 20%;
+  left: 20px;
+  position: absolute;
+  font-size: 12px;
+}
+button {
+  background-color: #008000;
+  color: white;
+  padding: 8px 20px;
+  margin: 8px 0;
+  border: 1px solid black;
+  cursor: pointer;
+  width: 88%;
+  position: absolute;
+  bottom: 2.5%;
+  left: 5%;
+}
+button:hover {
+    opacity: 0.8;
+}
+.google {
+    width: 8%;
+    position: absolute;
+    bottom: 0;
+    left: 36%;
+    border: 1px solid black;
+    border-radius: 15%;
+    padding: 10px;
+    background-color: #d6d6c2;
+}
+.gplus {
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    top: 3px;
+    left: 80px;
+    margin-bottom: 20%;
+}
+.facebook {
+    width: 8%;
+    position: absolute;
+    bottom: 0;
+    right: 35.7%;  
+    border: 1px solid black;
+    border-radius: 15%;
+    padding: 10px;
+    background-color: #d6d6c2;
+}
+.fb {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 4px;
+    left: 80px;
+    margin-bottom: 20%;
+}
+.google:hover {
+    opacity: 0.8;
+}
+.facebook:hover {
+     opacity: 0.8;
+}
+a {
+  color: black;
+}

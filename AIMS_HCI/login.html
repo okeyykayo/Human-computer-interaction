@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <title> LogIn Form </title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="sweetalert.js"></script>
+    <sript src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></sript>
+	<link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+    <div class="header">
+        <img src="logo.jpg">
+        <p id="upper">PHINMA EDUCATION</p>
+        <div class="line"></div>
+        <p id="under">MAKING LIVES BETTER THROUGH EDUCATION</p>
+    </div>
+
+    <div class="acad">Academic Information Management System <i class="fa fa-lock" aria-hidden="true"></i></div>
+    
+    <div class="login-box">
+        <h2>Login</h2>
+    	<div class="error"></div>
+            <form id="form" action="/" onsubmit="validation()">
+                <div class="textbox">
+                    <label for="name"> Student Number </label><br>  
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <input id="student" type="text" name="name" placeholder="Enter your student number" >
+
+                </div>
+          
+                <div class="textbox1">
+                    <label class="password" for="password"> Password </label><br>
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input id="password" type="password" name="password" placeholder="Enter your password" >
+                </div>
+            
+                <span class="rmbr"><input type="checkbox" name="remember">Remember me</span>
+
+                <a href="forget.html"><span class="fpsw">Forget password?</span></a>
+
+                <button id="btn">Log In</button>
+
+            </form>    
+
+            <div class="line1"></div>
+        
+            <a href="register.html"><input class="btn" type="button" value="Create Account/Register"></a>
+
+    </div>
+<script>
+     $('#btn').on('click', function(){    
+
+        var studentNumber = $('#student').val();
+        var password = $('#password').val();
+
+        if(studentNumber == ''|| password == '' ){
+            swal({
+              title: "Fields Empty!!",
+              text: "Please fill the missing field!",
+              icon: "warning",
+              button: "Ok!",
+            })
+        }
+        else{
+            swal({
+              title: "You've sucessfully Log in!",
+              icon: "success",
+              button: "Ok!",
+            })
+        }
+});
+const errorElement = document.getElementById('error')
+form.addEventListener('submit', (e) => {
+    
+        e.preventDefault()
+    }
+)
+</script>
+</body>
+</html>
